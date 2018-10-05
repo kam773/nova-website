@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.comp.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/responsive-nav.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<script src="js/responsive-nav.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
   <header class="page-header">
-      <div class="container">
-          <a href="#" class="brand-image">
-              <img src="img/logo-img.png" alt="Logo">
-          </a>
-          
-          <nav>
-              <ul class="menu-items">
-                  <li class="menu-item">
-                      <a href="#" class="menu-btn">top destinations</a>
-                  </li>
-                  <li class="menu-item">
-                      <a  href="#" class="menu-btn">add your boat</a>
-                  </li>
-                  <li class="menu-item">
-                      <a href="" class="sign-up">sign up</a>
-                  </li>
-              </ul>
-          </nav>
+        <div class="container">      
+            
+                <div class="topnav" id="myTopnav">
+                        <div class="img-wrapper">
+                          <img src="img/logo-img.png" alt="Logo">
+                        </div>
+                        <div class="list-wrapper">
+                            <a href="#" class="button">top destinations</a>
+                            <a href="#" class="button">add your boat</a>
+                            <a href="#" class="sign-up">sign up</a>
+                           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars" style="font-size:36px"></i>
+                        </a>
+                        </div>
+                        
+                      </div>
+                 
            <h1 class="header-main">RESERVE A BOAT NOW!</h1>
            <h3 class="header-secondary">and set your sails into paradise!</h3>
            <form action="#" class="search">
@@ -36,7 +39,7 @@
                    <span>FIND A BOAT</span>
                </a>
            </form>              
-      </div>
+    </div>
       
   </header>
   <section class="info-wrapper">
@@ -254,7 +257,7 @@
      </div>
       
    </footer>
-    
+   <script src="js/scripts.js"></script>
 </body>
 </html>
 

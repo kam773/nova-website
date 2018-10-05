@@ -10,6 +10,35 @@
     left: 24%;
     margin: 0 auto;
     text-align: center;
+
+    @media only screen and (max-width: $bp-large) {
+        position: relative;
+        top: 0;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        width: 65rem;
+        height: 10rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        position: relative;
+        top: 0;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        position: relative;
+        top: 0;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        display: none;
+    }
+
 }
 
 .text-wrapper {

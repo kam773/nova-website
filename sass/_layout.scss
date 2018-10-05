@@ -6,6 +6,21 @@
     background-size: cover;
     height: 60rem;
     position: relative;
+
+    @media only screen and (max-width: $bp-large) {
+        position: relative;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        position: relative;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        position: relative;
+        
+    }
+
+   
 }
 
 img {
@@ -32,24 +47,29 @@ img {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     @media only screen and (max-width: $bp-largest) {
-        font-size: 4.8rem;
+        font-size: 4rem;
     }
     
     @media only screen and (max-width: $bp-medium) {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     
     @media only screen and (max-width: $bp-small) {
         font-size: 3rem;
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 2.5rem;
+    }
+    
 }
 
 .header-secondary {
     color: var(--color-header);
     font-family: var(--font-primary);
-    font-size: 2rem;;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 2rem;
     text-transform: uppercase;
@@ -69,6 +89,10 @@ img {
     
     @media only screen and (max-width: $bp-small) {
         font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.3rem;
     }
 }
 
@@ -118,6 +142,17 @@ img {
     grid-template-rows: auto;
     grid-gap: 2rem;
     padding: 2rem 0;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 55%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, min-content);
+        grid-gap: 0;
+        padding: 1rem 0;
+    }
 }
 
 .top-locations {
