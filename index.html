@@ -14,21 +14,35 @@
 <body>
   <header class="page-header">
         <div class="container">      
-            
-                <div class="topnav" id="myTopnav">
-                        <div class="img-wrapper">
-                          <img src="img/logo-img.png" alt="Logo">
-                        </div>
-                        <div class="list-wrapper">
-                            <a href="#" class="button">top destinations</a>
-                            <a href="#" class="button">add your boat</a>
-                            <a href="#" class="sign-up">sign up</a>
-                           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                          <i class="fa fa-bars" style="font-size:36px"></i>
+                <div class="menu">
+                    <ul>
+                        <a href="#"><li>1. top destinations</li></a>
+                        <a href="#"><li>2. add your boat</li></a>
+                        <a href="#"><li>3. sign up</li></a>           
+                    </ul>
+                </div>
+                <div class="menu-toggle">
+                    <a href="#"><i style="color: #fff;" class="fa fa-angle-double-down"></i></a>
+                </div>
+                <div class="menu-normal">
+                  <div class="img-wrapper">
+                    <img src="img/logo-img.png" alt="Logo">
+                  </div>
+                  <div class="list-wrapper">
+                    <ul>
+                        <a href="#">
+                          <li class="button">add your boat</li>
                         </a>
-                        </div>
-                        
-                      </div>
+                         <a href="#">
+                          <li class="button">top destinations</li>
+                        </a>
+                        <a href="#">
+                            <li class="sign-up">sign up</li>
+                        </a>
+                      </ul>
+                  </div>
+                  
+                </div>
                  
            <h1 class="header-main">RESERVE A BOAT NOW!</h1>
            <h3 class="header-secondary">and set your sails into paradise!</h3>
@@ -138,7 +152,7 @@
                <h3 class="text-secondary">navigare necesse est, vivere non est necesse</h3>
                
                <div class="cta-2">
-                   <a href="" class="btn-red">
+                   <a href="#" class="btn-red">
                        Make money with your boat
                    </a>
                </div>
@@ -257,6 +271,7 @@
      </div>
       
    </footer>
+   <script src="js/jquery-3.3.1.js"></script>
    <script src="js/scripts.js"></script>
 </body>
 </html>

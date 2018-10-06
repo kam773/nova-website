@@ -6,7 +6,7 @@
     border-radius: 5px;
     background-color: var(--color-white);
     position: absolute;
-    top: 82%;
+    top: 85%;
     left: 24%;
     margin: 0 auto;
     text-align: center;
@@ -44,6 +44,7 @@
 .text-wrapper {
     text-align: center;
     padding-top: 10rem;
+
 }
 
 .text-primary {
@@ -54,6 +55,17 @@
     line-height: 2.7rem;
     text-transform: uppercase;
     letter-spacing: .45rem;
+
+
+    @media only screen and (max-width: $bp-small) {
+       font-size: 3.5rem;
+       line-height: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 2.5rem;
+        line-height: 1.5rem;
+    }
 }
 
 .text-secondary {
@@ -64,6 +76,16 @@
     line-height: 2.2rem;
     text-transform: uppercase;
     letter-spacing: 1.2px;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+ 
+     @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
 }
 
 
@@ -80,6 +102,18 @@
     text-transform: uppercase;
     letter-spacing: 1.2px;
     text-align: center;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        letter-spacing: .8px;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+        letter-spacing: .5px;
+    }
 }
 
 .features-text {
@@ -90,4 +124,16 @@
     line-height: 2.2rem;
     letter-spacing: 0.32px;
     text-align: center;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1rem;
+        line-height: 2rem;
+        letter-spacing: .8px;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0;
+    }
 }

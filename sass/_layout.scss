@@ -58,10 +58,13 @@ img {
     
     @media only screen and (max-width: $bp-small) {
         font-size: 3rem;
+        
     }
 
     @media only screen and (max-width: $bp-smallest) {
-        font-size: 2.5rem;
+        font-size: 2rem;      
+        line-height: 1.4;
+        top: 39%;
     }
     
 }
@@ -89,10 +92,12 @@ img {
     
     @media only screen and (max-width: $bp-small) {
         font-size: 1.6rem;
+        top: 47%;
     }
 
     @media only screen and (max-width: $bp-smallest) {
         font-size: 1.3rem;
+        top: 47%;
     }
 }
 
@@ -107,6 +112,20 @@ img {
     letter-spacing: 1.2px;
     text-align: center;
     margin-top: 15rem;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1rem;
+        line-height: 2rem;
+        letter-spacing: .8px;
+        margin-top: 10rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0;
+        margin-top: 5rem;
+    }
 }
 .section-text {
     color: var(--color-section-text);
@@ -116,6 +135,18 @@ img {
     line-height: 2.2rem;
     letter-spacing: 0.32px;
     text-align: center;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 1rem;
+        line-height: 2rem;
+        letter-spacing: .8px;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0;
+    }
 }
 
 // DIVIDER SECTION
@@ -131,40 +162,47 @@ img {
 // FOOTER
 .footer {
     background-color: var(--color-footer);
-    width: 100%;
     border-top: 4px solid var(--color-border);
   
 }
 
 .footer-inner {    
     display: grid;
-    grid-template-columns: 1fr repeat(5, 165px) 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr repeat(5, 16rem) 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 2rem;
     padding: 2rem 0;
 
     @media only screen and (max-width: $bp-small) {
-        font-size: 55%;
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       align-items: center;
+
     }
 
     @media only screen and (max-width: $bp-smallest) {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, min-content);
-        grid-gap: 0;
-        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
     }
 }
 
 .top-locations {
     grid-column: 2 / 3;
+
+
 }
 
 .newsletter {
     grid-column: 4 / 6;
+
 }
 
 .contact-list {
     grid-column: 7 / span 2;
+
 }
 
 .top-locations h4,
@@ -175,4 +213,15 @@ img {
     color: var(--color-white);
     text-align: left;
     
+    
+}
+
+.newsletter h4 {
+    @media only screen and (max-width: $bp-small) {
+        text-align: right;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        text-align: right;
+    }
 }

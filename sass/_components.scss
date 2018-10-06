@@ -6,23 +6,76 @@
     grid-gap: 1rem;
     margin-top: 5rem;
 
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr repeat(2, 45%) 1fr;
+        grid-template-rows: repeat(4, 30rem);
+        grid-gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: 1fr repeat(2, 45%) 1fr;
+        grid-template-rows: repeat(3, 30rem);
+        grid-gap: 1rem;
+        margin-top: 2rem;
+    }
 }
 
 .gallery-img-1 {
     grid-column: 2 / span 2;
     
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 4;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 2 / 4;
+    }
 }
 
 .gallery-img-2 {
     grid-column: 4 / 5;
     
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 3;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 2 / 3;
+    }
 }
 
 .gallery-img-3 {
     grid-column: 2 / 3;
     
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 3 / 4;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 3 / 4;
+    }
 }
 
+.gallery-img-4 {
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 3;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 2 / 3;
+    }
+}
+
+.gallery-img-5 {
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 3 / 4;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 3 / 4;
+    }
+}
 .gallery-img-1,
 .gallery-img-2,
 .gallery-img-3,
@@ -93,6 +146,8 @@
     left: 5%;
     transition: all .3s;
     backface-visibility: hidden;
+
+   
 }
 
 .gallery-btn span {
@@ -203,12 +258,25 @@
 
 .cta-2 {
     margin-top: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-top: 3
+
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        margin-top: 1rem;
+    }
 }
 
 .cta-2 > .btn-red {
     border-radius: 5px;
     background-color: #e7434e;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 1rem 2rem;
+    }
 }
 
 .cta-2 > a.btn-red {
@@ -238,11 +306,45 @@
         display: none;
    }
 }
-
-
-.topnav {
-    overflow: hidden;
-    position: relative;
+.menu {
+	background:#f0f0f0;
+	display:none;
+	width:100%;
+}
+.menu ul {
+	font-family: 'Merriweather', serif;
+	list-style:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.menu ul li {
+	color:#333;
+	font-size:12px;
+	letter-spacing:2px;
+	padding:15px 0;
+	text-transform:uppercase;
+}
+.menu ul li:hover {
+	background:#e9e9e9;
+}
+.menu a {
+    text-decoration:none;
+	color: #333;
+}
+.menu-toggle {
+	background:none;
+    color: #333;
+	width:100%;
+	text-align:center;
+	padding:10px 0;
+	font-size:25px;
+    display: none;
+  
+}
+.menu-toggle a {
+	text-decoration:none;
+	color: #333;
 }
 
 .button {
@@ -273,34 +375,25 @@
     transition: all .3s;
 }
 
-.button {
-    margin: 4.5rem 3rem;
-}
-
-.list-wrapper {
+.list-wrapper ul {
+    list-style-type: none;
     float: right;
 }
 
-.img-wrapper {
-    float: left;
-}
-
-.topnav .icon {
-    display: none;
-    margin: 3rem 3rem;
-
+.button {
+    margin: 4rem 3rem;
 }
 
 .button:hover {
     border-bottom: 2px solid var(--color-header);
 }
 
-a.sign-up {
+.sign-up {
     border-radius: 5px;
     border: 1px solid var(--color-header);
     padding: 1rem 4rem;
     transition: background-color .3s;
-    margin: 3.5rem 3rem;
+    margin: 2.5rem 3rem;
 }
 
 .sign-up:hover {
@@ -309,69 +402,17 @@ a.sign-up {
 }
 
 @media screen and (max-width: 700px) {
-    .topnav a {
+    .logo {
         display: none;
     }
-
-    .img-wrapper {
+    .menu-normal {
         display: none;
     }
-
-    .topnav a.icon {
-        float: right;
+    .menu-toggle {
         display: block;
-        margin-right: 50px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .topnav.responsive {
-        position: relative;
-        background-color: #000;
-        z-index: 999;
-    }
-
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: center;
-        margin-right: 200px;
-
-    }
-
-    .button:hover {
-        border: none;
-        background-color: white;
-        color: black;
-        transition: background-color .3s;
-    }
-
-    .button {
-        background-color: black;
-        color: white;
-        border-radius: 5px;
-    }
-
-    .sign-up:hover {
-        background-color: white;
-        color: black;
-    }
-
-    .sign-up {
-        border: none;
-    }
-
-    .topnav.responsive a:last-of-type {
-        float: none;
-        display: block;
-        text-align: left;
-        margin-right: 50px;
+        z-index: 555;
+        overflow: hidden;
+        
     }
 }
 
@@ -396,8 +437,15 @@ a.sign-up {
     }
        
     @media only screen and (max-width: $bp-small) {
-         width: 40rem;
+        width: 40rem;
+        flex-wrap: wrap;
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+        width: 40rem;
+    
+    }
+
 }
 
 .search__input {
@@ -438,6 +486,11 @@ a.sign-up {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        justify-content: center;
+        
+    }
 }
 
 .subscribe__input {
@@ -448,6 +501,17 @@ a.sign-up {
     vertical-align: middle;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-bottom: 1rem;
+        
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        margin-bottom: 1rem;
+        
+    }
+
 }
 
 .subscribe__input::placeholder {
@@ -465,7 +529,19 @@ a.sign-up {
     grid-template-columns: 1fr repeat(2, 40rem) 1fr;
     grid-template-rows: repeat(2, 25rem);
     grid-gap: 1rem;
-    margin-top: 5rem;   
+    margin-top: 5rem; 
+    
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr 90% 1fr;
+        grid-template-rows: repeat(4, 35rem);
+        grid-gap: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: 1fr 90% 1fr;
+        grid-template-rows: repeat(4, 35rem);
+        grid-gap: 1rem;
+    }
 }
 
 .feature-img-1,
@@ -484,6 +560,13 @@ a.sign-up {
     background-position: top;
     border-radius: 5px;
    
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 3;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 2 / 3;
+    }
 }
 
 .feature-img-2 {
@@ -492,7 +575,14 @@ a.sign-up {
     background-size: cover;
     background-position: top;  
     border-radius: 5px;
-   
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 3;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 2 / 3;
+    }
 }
 
 .feature-img-3 {
@@ -501,6 +591,14 @@ a.sign-up {
     background-size: cover;
     background-position: top;
     border-radius: 5px;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 3;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 2 / 3;
+    }
    
 }
 
@@ -511,6 +609,13 @@ a.sign-up {
     background-position: top;
     border-radius: 5px;
    
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 2 / 3;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: 2 / 3;
+    }
 }
 
 .gallery-img-title span > img {
@@ -550,6 +655,18 @@ a.sign-up {
     border-radius: 50%;
     position: relative;
     transition: background-color .3s;
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 6rem 1rem;
+        text-align: right;
+        margin-bottom: 0!important;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        margin: 6rem 1rem;
+        text-align: right;
+        margin-bottom: 0!important;
+    }
     
 }
 
@@ -566,7 +683,7 @@ a.sign-up {
     display: inline-block;
     padding: 0 3.5rem;
     position: relative;
-   
+
 }
 
 .info-list li:first-of-type {
